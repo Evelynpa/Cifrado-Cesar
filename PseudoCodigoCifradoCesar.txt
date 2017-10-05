@@ -1,0 +1,58 @@
+INICIO
+	Escribir escojer opción 1 Cifrar o 2 Descifrar
+	Si elije 1 Entonces
+		ir a función cifrar
+		
+		Fin Si
+		Si elije opcion 2 Entonces
+			ir a funcion descifrar
+			Fin Si
+	var textOriginal = Escribir 'Ingrese frase a cifrar'
+	Funcion cifrar (frase)
+		Leer letra,numeroAcsii,result,textoCifrado
+		Si frase = 'number' o frase = 0 numeros Entonces
+			imprimir Debe ingresar letras
+			SiNo Si frase == Mayusculas Entonces
+					Para i<-0 Hasta frase Con Paso 1 Hacer
+						itera a cada letra su valor en ascii y lo guarda en la variable numeroAcsii
+						ejecuta la formula del codigo cesar y lo guarda en variable result (numeroAcsii - 65 + 33)%26 + 65
+						el valor ascii lo cambia a letra y lo guarda en variable textoCifrado
+						
+						el valor de variable textoCifrado se va concatenando en cada iteracion
+					Fin Para
+			SiNo 
+				Para i<-0 Hasta frase Con Paso 1 Hacer
+					itera a cada letra su valor en ascii y lo guarda en la variable numeroAcsii
+					ejecuta la formula del codigo cesar y lo guarda en variable result (numeroAcsii - 97 + 33)%26 + 97
+					el valor ascii lo cambia a letra y lo guarda en variable textoCifrado
+					
+					el valor de variable textoCifrado se va concatenando en cada iteracion
+				Fin Para
+		Fin Si
+	Fin Funcion
+	cifrar(texto)
+	var textCifrado = Escribir 'Ingrese frase a cifrar'
+	Funcion descifrar (frase)
+		Leer letra,numeroAcsii,result,textoCifrado
+		Si frase == 'number' o frase == 0 numeros Entonces
+			imprimir Debe ingresar letras
+		SiNo Si frase == Mayusculas Entonces
+				Para i<-0 Hasta frase Con Paso 1 Hacer
+					itera a cada letra su valor en ascii y lo guarda en la variable numeroAcsii
+					ejecuta la formula del codigo cesar y lo guarda en variable result (numeroAcsii + 65 - 33)%26 + 65
+					el valor ascii lo cambia a letra y lo guarda en variable textoCifrado
+					
+					el valor de variable textoCifrado se va concatenando en cada iteracion
+				Fin Para
+			SiNo 
+				Para i<-0 Hasta frase Con Paso 1 Hacer
+					itera a cada letra su valor en ascii y lo guarda en la variable numeroAcsii
+					ejecuta la formula del codigo cesar y lo guarda en variable result (numeroAcsii + 85 - 33)%26 + 97
+					el valor ascii lo cambia a letra y lo guarda en variable textoCifrado
+					
+					el valor de variable textoCifrado se va concatenando en cada iteracion
+				Fin Para
+			Fin Si
+		Fin Funcion
+		descifrar (texto)
+FIN
