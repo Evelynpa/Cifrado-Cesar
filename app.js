@@ -4,7 +4,7 @@ charCodeAt() ingresar posicion y lo devuelve en acsii
 'A'.charCodeAt(0) // 65
 String.fromCharCode(72) // 'H' **** ingresa el acsii y devuelve la letra*
 */
- principal(option){
+ function principal(option){
 	do{
 		var respuesta = prompt("Indique el número de la función a realizar: 1)Cifrar - 2)Descifrar");
 		if(respuesta != ""){
